@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-export default function EventCards({ title, type, dates, image, description }) {
+export default function EventCards({ title, type, date, image, description }) {
   return (
     <>
       <div className="flex items-center md:flex-row sm:flex-col overflow-hidden mx-20 my-10 w-100 md:h-64 sm:h-auto bg-white drop-shadow-xl rounded-md">
@@ -9,7 +7,7 @@ export default function EventCards({ title, type, dates, image, description }) {
         </div>
         <div className="mx-10 mt-10">
           <div className="mb-3">
-            <h1 className="text-xl text-slate-600 font-bold">{dates}</h1>
+            <h1 className="text-xl text-slate-600 font-bold">{date}</h1>
             <h1 className="text-4xl text-black font-bold">{title}</h1>
           </div>
           <h1 className="text-md text-black ">{description}</h1>
