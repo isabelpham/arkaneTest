@@ -7,7 +7,7 @@ export default function EventCards({ title, type, date, image, description }) {
         </div>
         <div className="mx-10 mt-10">
           <div className="mb-3">
-            <h1 className="text-xl text-slate-600 font-bold">{date}</h1>
+            <div className="text-xl text-slate-600 font-bold">{date}</div>
             <h1 className="text-4xl text-black font-bold">{title}</h1>
           </div>
           <h1 className="text-md text-black ">{description}</h1>

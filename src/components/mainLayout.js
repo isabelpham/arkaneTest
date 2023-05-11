@@ -13,10 +13,13 @@ export default function MainLayout(eventData) {
       itemNum += 1;
       const dateObj = new Date(mockInfo[i].Dates[j]);
       const d = dateObj.toLocaleDateString("en-US", {
-        weekday: "long",
+        timeZone: "US/Pacific",
+        weekday: "short",
         year: "numeric",
-        month: "long",
+        month: "short",
         day: "numeric",
+      });
+      const t = dateObj.toLocaleString("en-US", {
         timeZone: "US/Pacific",
         hour: "2-digit",
         minute: "2-digit",
@@ -26,7 +29,7 @@ export default function MainLayout(eventData) {
           key={itemNum}
           title={mockInfo[i].Title}
           type={mockInfo[i].Type}
-          date={d}
+          date={d + " at " + t}
           image={mockInfo[i].Image}
           description={mockInfo[i].Description}
         ></EventCards>
